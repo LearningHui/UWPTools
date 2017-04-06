@@ -188,6 +188,36 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomControls\CustomControls.csproj">
+      <Project>{57081631-26f3-4b64-901b-71c79f965007}</Project>
+      <Name>CustomControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JsonHelper\JsonHelper.csproj">
+      <Project>{728b57fc-9fe0-4d9b-b679-08ed9370427a}</Project>
+      <Name>JsonHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LLBT_SignLib\LLBT_SignLib.csproj">
+      <Project>{2e5652fb-a314-4f5f-b188-9647d39c68a1}</Project>
+      <Name>LLBT_SignLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LuaScript\LuaScript.csproj">
+      <Project>{4fbb6d2f-0d7a-480e-8c19-d4bf70fabcd4}</Project>
+      <Name>LuaScript</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TLSLib\TLSLib.csproj">
+      <Project>{aa5fef66-9134-47ff-8038-13bc13ee5d2e}</Project>
+      <Name>TLSLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ToolsLib\ToolsLib.csproj">
+      <Project>{ecd3f5f7-2dbc-444a-a5b8-2a8dfa719b35}</Project>
+      <Name>ToolsLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserControls\UserControls.csproj">
+      <Project>{6d8ea09b-5e91-4b52-b507-49c1c08fff9a}</Project>
+      <Name>UserControls</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

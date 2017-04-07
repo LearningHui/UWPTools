@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControls", "UserControl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignApp", "SignApp\SignApp.csproj", "{90373191-EBE8-473B-B621-ED80693FA5B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWPCommunityToolkitTestApp", "UWPCommunityToolkitTestApp\UWPCommunityToolkitTestApp.csproj", "{1006659A-CCC9-4F3C-B143-0011DC676671}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -217,6 +219,26 @@ Global
 		{90373191-EBE8-473B-B621-ED80693FA5B5}.Release|x86.ActiveCfg = Release|x86
 		{90373191-EBE8-473B-B621-ED80693FA5B5}.Release|x86.Build.0 = Release|x86
 		{90373191-EBE8-473B-B621-ED80693FA5B5}.Release|x86.Deploy.0 = Release|x86
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Debug|ARM.ActiveCfg = Debug|ARM
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Debug|ARM.Build.0 = Debug|ARM
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Debug|ARM.Deploy.0 = Debug|ARM
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Debug|x64.ActiveCfg = Debug|x64
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Debug|x64.Build.0 = Debug|x64
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Debug|x64.Deploy.0 = Debug|x64
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Debug|x86.ActiveCfg = Debug|x86
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Debug|x86.Build.0 = Debug|x86
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Debug|x86.Deploy.0 = Debug|x86
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Release|Any CPU.ActiveCfg = Release|x86
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Release|ARM.ActiveCfg = Release|ARM
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Release|ARM.Build.0 = Release|ARM
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Release|ARM.Deploy.0 = Release|ARM
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Release|x64.ActiveCfg = Release|x64
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Release|x64.Build.0 = Release|x64
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Release|x64.Deploy.0 = Release|x64
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Release|x86.ActiveCfg = Release|x86
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Release|x86.Build.0 = Release|x86
+		{1006659A-CCC9-4F3C-B143-0011DC676671}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

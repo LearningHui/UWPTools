@@ -107,6 +107,9 @@
     <Compile Include="SamplePages\AdaptiveGridViewPage.xaml.cs">
       <DependentUpon>AdaptiveGridViewPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Test\HamburgerMenu.xaml.cs">
+      <DependentUpon>HamburgerMenu.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -158,6 +161,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="SamplePages\AdaptiveGridViewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test\HamburgerMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

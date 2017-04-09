@@ -1,0 +1,44 @@
+[
+  {
+    "Name": "Controls",
+    "Icon": "Icons/Foundation.png",
+    "Samples": [
+     {
+        "Name": "Carousel",
+        "Type": "CarouselPage",
+        "About": "Presents items in a carousel control. It reacts to changes in the layout as well as the content so it can adapt to different form factors automatically.",
+        "CodeUrl": "https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.UI.Controls/Carousel",
+        "XamlCodeFile": "CarouselCode.bind",
+        "Icon": "/SamplePages/Carousel/Carousel.png"
+      }
+    ]
+  },
+  {
+    "Name": "Animations",
+    "Icon": "Icons/Animations.png",
+    "Samples": [
+      
+    ]
+  },
+  {
+    "Name": "Helpers",
+    "Icon": "Icons/Helpers.png",
+    "Samples": [
+      
+    ]
+  },
+  {
+    "Name": "Developer tools",
+    "Icon": "Icons/DeveloperTools.png",
+    "Samples": [
+      
+    ]
+  },
+  {
+    "Name": "More resources",
+    "Icon": "Icons/More.png",
+    "Samples": [
+      
+    ]
+  }
+]

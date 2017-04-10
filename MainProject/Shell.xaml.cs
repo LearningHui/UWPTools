@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,9 +23,12 @@ namespace MainProject
     /// </summary>
     public sealed partial class Shell : Page
     {
+        public static Shell Current { get; private set; }
+        private Sample _currentSample;
         public Shell()
         {
             this.InitializeComponent();
+            Current = this;
         }
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -32,6 +36,93 @@ namespace MainProject
             // Get list of samples
             var sampleCategories = (await Samples.GetCategoriesAsync()).ToList();
             HamburgerMenu.ItemsSource = sampleCategories;
+            NavigationFrame.Navigating += NavigationFrame_Navigating;
+            NavigationFrame.Navigated += NavigationFrameOnNavigated;
+            SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+        }
+
+        /// <summary>
+        /// Called when [back requested] event is fired.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="backRequestedEventArgs">The <see cref="BackRequestedEventArgs"/> instance containing the event data.</param>
+        private void OnBackRequested(object sender, BackRequestedEventArgs backRequestedEventArgs)
+        {
+            if (backRequestedEventArgs.Handled)
+            {
+                return;
+            }
+
+            if (NavigationFrame.CanGoBack)
+            {
+                backRequestedEventArgs.Handled = true;
+
+                NavigationFrame.GoBack();
+            }
+        }
+
+        /// <summary>
+        /// When the frame has navigated this method is called.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="navigationEventArgs">The <see cref="NavigationEventArgs"/> instance containing the event data.</param>
+        private void NavigationFrameOnNavigated(object sender, NavigationEventArgs e)
+        {
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = NavigationFrame.CanGoBack
+                ? AppViewBackButtonVisibility.Visible
+                : AppViewBackButtonVisibility.Collapsed;
+        }
+
+        private async void NavigationFrame_Navigating(object sender, NavigatingCancelEventArgs navigationEventArgs)
+        {
+            SampleCategory category;
+            if (navigationEventArgs.SourcePageType == typeof(SamplePicker) || navigationEventArgs.Parameter == null)
+            {
+                DataContext = null;
+                category = navigationEventArgs.Parameter as SampleCategory;                
+            }
+            else
+            {
+                var sampleName = navigationEventArgs.Parameter.ToString();
+                var sample = await Samples.GetSampleByName(sampleName);
+                if (sample == null)
+                {
+                    return;
+                }
+
+                category = await Samples.GetCategoryBySample(sample);
+                DataContext = sample;
+                _currentSample = sample;                
+            }
+            if (category == null && navigationEventArgs.SourcePageType == typeof(SamplePicker))
+            {
+                // This is a search
+                HamburgerMenu.SelectedItem = null;
+                HamburgerMenu.SelectedOptionsItem = null;
+            }
+            else
+            {
+                if (HamburgerMenu.Items.Contains(category))
+                {
+                    HamburgerMenu.SelectedItem = category;
+                    HamburgerMenu.SelectedOptionsItem = null;
+                }
+                else
+                {
+                    //HamburgerMenu.SelectedItem = null;
+                    //HamburgerMenu.SelectedOptionsIndex = category != null ? 0 : 1;
+                }
+            }
+        }
+
+        public void NavigateToSample(Sample sample)
+        {
+            var pageType = Type.GetType("MainProject.Test." + sample.Type);
+
+            if (pageType != null)
+            {
+                NavigationFrame.Navigate(pageType, sample.Name);
+            }
         }
         private void HamburgerMenu_OnItemClick(object sender, ItemClickEventArgs e)
         {
@@ -39,7 +130,12 @@ namespace MainProject
 
             if (category != null)
             {
-                //NavigationFrame.Navigate(typeof(SamplePicker), category);
+                while (NavigationFrame.BackStack.Count > 0)
+                {
+                    if (NavigationFrame.CanGoBack)
+                        NavigationFrame.GoBack();
+                }                
+                NavigationFrame.Navigate(typeof(SamplePicker), category);
             }
         }
 
@@ -62,5 +158,6 @@ namespace MainProject
                 NavigationFrame.Navigate(option.PageType);
             }
         }
+
     }
 }

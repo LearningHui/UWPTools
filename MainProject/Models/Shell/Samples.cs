@@ -40,7 +40,7 @@ namespace MainProject
                 List<SampleCategory> allCategories;
                 using (var jsonStream = await StreamHelper.GetPackagedFileStreamAsync("samples.json"))
                 {
-                    var jsonString = await jsonStream.ReadTextAsync();
+                    var jsonString = await jsonStream.ReadTextAsync(Encoding.UTF8);
                     allCategories = JsonConvert.DeserializeObject<List<SampleCategory>>(jsonString);
                 }
 

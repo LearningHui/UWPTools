@@ -3,13 +3,45 @@
     "Name": "Controls",
     "Icon": "Icons/Foundation.png",
     "Samples": [
-     {
+      {
         "Name": "Carousel",
         "Type": "CarouselPage",
         "About": "Presents items in a carousel control. It reacts to changes in the layout as well as the content so it can adapt to different form factors automatically.",
         "CodeUrl": "https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.UI.Controls/Carousel",
         "XamlCodeFile": "CarouselCode.bind",
         "Icon": "/SamplePages/Carousel/Carousel.png"
+      },
+      {
+        "Name": "FlipPanel",
+        "Type": "FlipPanelTest",
+        "About": "可翻转的panel，提供正面和背面两个不同UI",
+        "CodeUrl": "",
+        "XamlCodeFile": "",
+        "Icon": ""
+      },      
+      {
+        "Name": "FlipPanelAlternate",
+        "Type": "FlipPanelAlternateTemplate",
+        "About": "可翻转的panel，提供正面和背面两个不同UI",
+        "CodeUrl": "",
+        "XamlCodeFile": "",
+        "Icon": ""
+      },
+      {
+        "Name": "ColorPicker",
+        "Type": "ColorPicker",
+        "About": "根据RGB值获取颜色",
+        "CodeUrl": "",
+        "XamlCodeFile": "",
+        "Icon": ""
+      },
+      {
+        "Name": "WrapBreakPanel",
+        "Type": "WrapBreakPanelTest",
+        "About": "可自动折行的panel",
+        "CodeUrl": "",
+        "XamlCodeFile": "",
+        "Icon": ""
       }
     ]
   },
@@ -24,7 +56,14 @@
     "Name": "Helpers",
     "Icon": "Icons/Helpers.png",
     "Samples": [
-      
+      {
+        "Name": "HttpHeler",
+        "Type": "HttpTest",
+        "About": "封装了http的请求方式，包括post&get请求（同步及异步方式）",
+        "CodeUrl": "",
+        "XamlCodeFile": "",
+        "Icon": ""
+      }
     ]
   },
   {

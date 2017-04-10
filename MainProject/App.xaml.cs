@@ -59,7 +59,7 @@ namespace MainProject
                 rootFrame = new Frame();
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
-                rootFrame.Navigated += OnNavigated;
+                //rootFrame.Navigated += OnNavigated;
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
@@ -68,11 +68,11 @@ namespace MainProject
 
                 // 将框架放在当前窗口中
                 Window.Current.Content = rootFrame;
-                SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
-                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
-                    rootFrame.CanGoBack ?
-                    AppViewBackButtonVisibility.Visible :
-                    AppViewBackButtonVisibility.Collapsed;
+                //SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+                //SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
+                //    rootFrame.CanGoBack ?
+                //    AppViewBackButtonVisibility.Visible :
+                //    AppViewBackButtonVisibility.Collapsed;
             }
 
             if (e.PrelaunchActivated == false)
@@ -89,24 +89,24 @@ namespace MainProject
             }
         }
 
-        private void OnBackRequested(object sender, BackRequestedEventArgs e)
-        {
-            Frame rootFrame = Window.Current.Content as Frame;
+        //private void OnBackRequested(object sender, BackRequestedEventArgs e)
+        //{
+        //    Frame rootFrame = Window.Current.Content as Frame;
 
-            if (rootFrame != null && rootFrame.CanGoBack)
-            {
-                e.Handled = true;
-                rootFrame.GoBack();
-            }
-        }
+        //    if (rootFrame != null && rootFrame.CanGoBack)
+        //    {
+        //        e.Handled = true;
+        //        rootFrame.GoBack();
+        //    }
+        //}
 
-        private void OnNavigated(object sender, NavigationEventArgs e)
-        {
-            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
-        ((Frame)sender).CanGoBack ?
-        AppViewBackButtonVisibility.Visible :
-        AppViewBackButtonVisibility.Collapsed;
-        }
+        //private void OnNavigated(object sender, NavigationEventArgs e)
+        //{
+        //    SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
+        //((Frame)sender).CanGoBack ?
+        //AppViewBackButtonVisibility.Visible :
+        //AppViewBackButtonVisibility.Collapsed;
+        //}
 
         /// <summary>
         /// 导航到特定页失败时调用

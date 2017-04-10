@@ -1,17 +1,16 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:customControls="using:CustomControls"
-    xmlns:local="using:CustomControls.Themes">
+    xmlns:local="using:CustomControls">
 
     <!--custom button-->
-    <Style TargetType="customControls:MyButton">
+    <Style TargetType="local:MyButton">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderBrush" Value="Green"/>
         <Setter Property="Foreground" Value="Purple"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="customControls:MyButton">
+                <ControlTemplate TargetType="local:MyButton">
                     <Grid Background="Transparent">
                         <Border CornerRadius="{TemplateBinding CornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}">
                             <Grid>
@@ -54,10 +53,10 @@
         </Setter>
     </Style>
 
-    <Style TargetType="customControls:ColorPicker">
+    <Style TargetType="local:ColorPicker">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="customControls:ColorPicker">
+                <ControlTemplate TargetType="local:ColorPicker">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
@@ -95,23 +94,23 @@
         </Setter>
     </Style>
 
-    <Style TargetType="customControls:FlipPanel">
+    <Style TargetType="local:FlipPanel">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="customControls:FlipPanel">
+                <ControlTemplate TargetType="local:FlipPanel">
                     <Grid>
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="ViewStates">
                                 <VisualStateGroup.Transitions>
                                     <VisualTransition GeneratedDuration="0:0:1" To="Flipped">
-                                        <Storyboard>
+                                        <!--<Storyboard>
                                             <DoubleAnimation Storyboard.TargetName="FlipButtonTransform" Storyboard.TargetProperty="Angle" To="90" Duration="0:0:0.2"></DoubleAnimation>
-                                        </Storyboard>
+                                        </Storyboard>-->
                                     </VisualTransition>
                                     <VisualTransition GeneratedDuration="0:0:1" To="Normal">
-                                        <Storyboard>
+                                        <!--<Storyboard>
                                             <DoubleAnimation Storyboard.TargetName="FlipButtonTransform" Storyboard.TargetProperty="Angle" To="-90" Duration="0:0:0.2"></DoubleAnimation>
-                                        </Storyboard>
+                                        </Storyboard>-->
                                     </VisualTransition>
                                 </VisualStateGroup.Transitions>
 
@@ -123,7 +122,7 @@
 
                                 <VisualState x:Name="Flipped">
                                     <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetName="FlipButtonTransform" Storyboard.TargetProperty="Angle" To="90" Duration="0"></DoubleAnimation>
+                                        <!--<DoubleAnimation Storyboard.TargetName="FlipButtonTransform" Storyboard.TargetProperty="Angle" To="90" Duration="0"></DoubleAnimation>-->
                                         <DoubleAnimation Storyboard.TargetName="FrontContent" Storyboard.TargetProperty="Opacity" To="0" Duration="0"></DoubleAnimation>
                                     </Storyboard>
                                 </VisualState>

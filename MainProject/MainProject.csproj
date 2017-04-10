@@ -180,8 +180,8 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Test\ColorPicker.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Test\FlipPanelAlternateTemplate.xaml">
       <SubType>Designer</SubType>

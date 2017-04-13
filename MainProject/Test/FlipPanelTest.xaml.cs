@@ -31,5 +31,10 @@ namespace MainProject.Test
         {
             panel.IsFlipped = !panel.IsFlipped;
         }
+
+        private void ChangFlipState_Click(object sender, RoutedEventArgs e)
+        {
+            panel.IsFlipped = !panel.IsFlipped;
+        }
     }
 }

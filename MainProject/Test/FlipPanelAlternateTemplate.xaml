@@ -80,7 +80,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <customControls:FlipPanel x:Name="panel" Height="300"
                                   BorderBrush="DarkOrange"
-                                  BorderThickness="3"
+                                  BorderThickness="2"
                                   CornerRadius="4"
                                   Margin="10"
                                   Template="{StaticResource AlternateTemplate}">

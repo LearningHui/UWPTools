@@ -8,16 +8,17 @@
     xmlns:customControl="using:CustomControls"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <customControl:FlipPanel x:Name="panel" BorderBrush="DarkOrange" BorderThickness="3" IsFlipped="True"
+    <Grid Background="{StaticResource Brush-Grey-05}">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <customControl:FlipPanel x:Name="panel" BorderBrush="DarkOrange" BorderThickness="2" IsFlipped="False"
          CornerRadius="4" Margin="10">
             <customControl:FlipPanel.FrontContent>
                 <StackPanel Margin="6">
                     <TextBlock TextWrapping="Wrap" Margin="3" FontSize="16" Foreground="DarkOrange">This is the front side of the FlipPanel.</TextBlock>
                     <Button Margin="3" Padding="3" Content="Button One"></Button>
-                    <Button Margin="3" Padding="3" Content="Button Two"></Button>
-                    <Button Margin="3" Padding="3" Content="Button Three"></Button>
-                    <Button Margin="3" Padding="3" Content="Button Four"></Button>
                 </StackPanel>
             </customControl:FlipPanel.FrontContent>
             <customControl:FlipPanel.BackContent>
@@ -31,5 +32,6 @@
                 </Grid>
             </customControl:FlipPanel.BackContent>
         </customControl:FlipPanel>
+        <Button Grid.Row="1" Margin="10" HorizontalAlignment="Stretch" Content="Flip" Click="ChangFlipState_Click"></Button>
     </Grid>
 </Page>

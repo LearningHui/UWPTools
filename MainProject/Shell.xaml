@@ -6,6 +6,12 @@
     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:extensions="using:Microsoft.Toolkit.Uwp.UI.Extensions"
+    extensions:TitleBar.BackgroundColor="{StaticResource Grey-01}"
+    extensions:TitleBar.ButtonBackgroundColor="{StaticResource Grey-03}"
+    extensions:TitleBar.ButtonForegroundColor="{StaticResource Grey-04}"
+    extensions:TitleBar.ForegroundColor="{StaticResource Grey-04}"
+    extensions:StatusBar.IsVisible="False"
     mc:Ignorable="d">
     <Page.Resources>
         <DataTemplate x:Key="ButtonTemplate"

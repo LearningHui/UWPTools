@@ -77,7 +77,14 @@
     "Name": "More resources",
     "Icon": "Icons/More.png",
     "Samples": [
-      
+       {
+        "Name": "SplitView",
+        "Type": "SplitViewTest",
+        "About": "Test splitView control",
+        "CodeUrl": "",
+        "XamlCodeFile": "",
+        "Icon": ""
+      }     
     ]
   }
 ]

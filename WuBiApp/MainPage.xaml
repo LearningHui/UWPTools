@@ -8,6 +8,10 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <StackPanel Margin="60">
+            <TextBox x:Name="hanZiTB" Margin="0 10" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBox>
+            <Button Tapped="Button_Tapped" Margin="0 10" HorizontalAlignment="Center" Content="查询"></Button>
+            <TextBlock x:Name="codeTbk" Margin="0 10" HorizontalAlignment="Center"></TextBlock>
+        </StackPanel>
     </Grid>
 </Page>

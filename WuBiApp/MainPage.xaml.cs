@@ -186,6 +186,18 @@ namespace WuBiApp
                 if (isFound)
                     break;
             }
+            int totalCount = 0;
+            foreach (var category in WBCategories)
+            {
+                if(category.WBList.Count()>0)
+                {
+                    for (int i = 0; i < category.WBList.Count(); i++)
+                    {
+                        totalCount++;
+                    }
+                }
+                
+            }
         }
     }
 }

@@ -12,34 +12,34 @@ namespace LLBT_SignLib
         /// <summary>
         /// 默认广源地址
         /// </summary>
-        public const string DefaultNetIp = "http://22.18.61.188:9194/sign-manager/";
+        public const string DefaultNetIp = "http://192.168.1.188:9194/sign-manager/";
         /// <summary>
         /// 网络地址
         /// </summary>
-        public static string NetIp = "http://22.18.61.188:9194/sign-manager/";
+        public static string NetIp = "http://192.168.1.188:9194/sign-manager/";
 
         public static string GetDeviceUniqueId()
         {
-            return "0421460710001350";
+            //return "0421460710001350";
 
-            //EasClientDeviceInformation deviceInfo = new EasClientDeviceInformation();
-            //byte[] bytes = deviceInfo.Id.ToByteArray();
-            //string strTemp = "";
-            //string strDeviceUniqueID = "";
-            //foreach (byte b in bytes)
-            //{
-            //    strTemp = b.ToString();
-            //    if (1 == strTemp.Length)
-            //    {
-            //        strTemp = "00" + strTemp;
-            //    }
-            //    else if (2 == strTemp.Length)
-            //    {
-            //        strTemp = "0" + strTemp;
-            //    }
-            //    strDeviceUniqueID += strTemp;
-            //}
-            //return strDeviceUniqueID.Substring(0, 16);
+            EasClientDeviceInformation deviceInfo = new EasClientDeviceInformation();
+            byte[] bytes = deviceInfo.Id.ToByteArray();
+            string strTemp = "";
+            string strDeviceUniqueID = "";
+            foreach (byte b in bytes)
+            {
+                strTemp = b.ToString();
+                if (1 == strTemp.Length)
+                {
+                    strTemp = "00" + strTemp;
+                }
+                else if (2 == strTemp.Length)
+                {
+                    strTemp = "0" + strTemp;
+                }
+                strDeviceUniqueID += strTemp;
+            }
+            return strDeviceUniqueID.Substring(0, 16);
         }
     }
 }

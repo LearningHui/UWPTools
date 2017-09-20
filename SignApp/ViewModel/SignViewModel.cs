@@ -69,16 +69,17 @@ namespace SignApp.ViewModel
         #endregion
 
         #region Method
-        private async void BindDevice()
+        public async Task<string> BindDevice(string userName)
         {
             BindDeviceRequest sParams = new BindDeviceRequest();
             sParams.deviceId = Configuration.GetDeviceUniqueId();
-            sParams.userName = "zou.penghui";
+            sParams.userName = userName;
 
             HttpSerializeData<BindDeviceRequest> httpSerializeData = new HttpSerializeData<BindDeviceRequest>("bindDevice.html", sParams);
             string url = httpSerializeData.GetURL();
             NetworkRequest networkRequest = NetworkRequest.CreateHttp(httpSerializeData.GetURL());
             var result = await networkRequest.PostAsync<string>(JsonAnalysis.Serialize(httpSerializeData));
+            return result;
         }
 
         public async Task<bool> GetUserInfo()
@@ -166,6 +167,7 @@ namespace SignApp.ViewModel
                 this.SystemTime = sData.result.sysTime;
                 this.SignInTime = sData.result.signInTime;
                 this.SignOutTime = sData.result.signOutTime;
+                this.UserName = sData.result.realName;
                 return sData.result;
             }
             else if (sData.status.code.Equals("0000"))
@@ -173,6 +175,7 @@ namespace SignApp.ViewModel
                 this.SystemTime = sData.result.sysTime;
                 this.SignInTime = sData.result.signInTime;
                 this.SignOutTime = sData.result.signOutTime;
+                this.UserName = sData.result.realName;
                 if (queryOnly.Equals("false"))
                 {
                     //todo:报错

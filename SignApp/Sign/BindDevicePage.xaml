@@ -18,7 +18,7 @@
                 <TextBox x:Name="textBox" Margin="12" Height="45"/>
             </StackPanel>
         </StackPanel>
-        <Button Margin="48" Content="确定" Height="50" FontSize="28" Background="#cd1821" BorderBrush="#cd1821" Foreground="White" HorizontalAlignment="Stretch" Visibility="Visible"/>
+        <Button Margin="48" Click="Button_Click" Content="确定" Height="50" FontSize="28" Background="#cd1821" BorderBrush="#cd1821" Foreground="White" HorizontalAlignment="Stretch" Visibility="Visible"/>
 
         
     </Grid>

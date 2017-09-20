@@ -34,7 +34,6 @@ namespace SignApp.Sign
 
         private async void SignPage_Loaded(object sender, RoutedEventArgs e)
         {
-            vm.UserName = "邹鹏辉";
             await VMLocator.Instance.SignVM.DoSign("true");//查询打卡信息
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SignApp.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,18 @@ namespace SignApp.Sign
     /// </summary>
     public sealed partial class BindDevicePage : Page
     {
+        SignViewModel vm = VMLocator.Instance.SignVM;
         public BindDevicePage()
         {
             this.InitializeComponent();
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(string.IsNullOrEmpty(await vm.BindDevice(textBox.Text)))
+            {
+                (Window.Current.Content as Frame).Navigate(typeof(SignPage));
+            }
         }
     }
 }

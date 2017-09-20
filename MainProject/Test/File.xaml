@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="MainProject.Test.File"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MainProject.Test"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Name="btnGetName" Width="200" Height="100" Content="读取文件名" Click="btnGetName_Click"/>
+                <TextBlock Name="textBlockFileName" Width="500" Height="300" FontSize="30" Margin="12"/>
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="createFileButton" Click="createFileButton_Click"> read write</Button>
+    </Grid>
+</Page>

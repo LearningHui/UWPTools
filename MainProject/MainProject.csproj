@@ -118,6 +118,9 @@
     <Compile Include="Test\ColorPicker.xaml.cs">
       <DependentUpon>ColorPicker.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Test\File.xaml.cs">
+      <DependentUpon>File.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Test\FlipPanelAlternateTemplate.xaml.cs">
       <DependentUpon>FlipPanelAlternateTemplate.xaml</DependentUpon>
     </Compile>
@@ -185,6 +188,10 @@
     <Page Include="Test\ColorPicker.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Test\File.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Test\FlipPanelAlternateTemplate.xaml">
       <SubType>Designer</SubType>

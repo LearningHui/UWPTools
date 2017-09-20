@@ -21,7 +21,7 @@
                 <HyperlinkButton Content="WrapBreakPanelTest" HorizontalAlignment="Center" Click="Navagage_Click"/>
                 <HyperlinkButton Content="HttpTest" HorizontalAlignment="Center" Click="Navagage_Click"/>
                 <HyperlinkButton Content="JsonSerialize" HorizontalAlignment="Center" Click="Navagage_Click"/>
-
+                <HyperlinkButton Content="File" HorizontalAlignment="Center" Click="Navagage_Click"/>
             </StackPanel>
         </ScrollViewer>
     </Grid>

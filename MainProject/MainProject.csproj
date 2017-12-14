@@ -139,6 +139,9 @@
     <Compile Include="Test\FoundationControls\SplitView.xaml.cs">
       <DependentUpon>SplitView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Test\TimerTest.xaml.cs">
+      <DependentUpon>TimerTest.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Test\WrapBreakPanelTest.xaml.cs">
       <DependentUpon>WrapBreakPanelTest.xaml</DependentUpon>
     </Compile>
@@ -214,6 +217,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Test\FoundationControls\SplitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test\TimerTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

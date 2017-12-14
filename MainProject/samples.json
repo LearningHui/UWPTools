@@ -63,6 +63,14 @@
         "CodeUrl": "",
         "XamlCodeFile": "",
         "Icon": ""
+      },
+      {
+        "Name": "TimerTest",
+        "Type": "TimerTest",
+        "About": "定时器测试及使用方法",
+        "CodeUrl": "",
+        "XamlCodeFile": "",
+        "Icon": ""
       }
     ]
   },
